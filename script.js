@@ -20,25 +20,24 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     });
   });
-  
 
   document.addEventListener("DOMContentLoaded", function() {
     const navbarMenu = document.getElementById("navbarMenu");
     const overlay = document.getElementById("overlay");
   
     // Show overlay when menu is opened
-    navbarMenu.addEventListener("show.bs.collapse", function () {
+    $('#navbarMenu').on('show.bs.collapse', function () {
       overlay.style.display = "block";
     });
   
     // Hide overlay when menu is closed
-    navbarMenu.addEventListener("hide.bs.collapse", function () {
+    $('#navbarMenu').on('hide.bs.collapse', function () {
       overlay.style.display = "none";
     });
   
     // Close the menu when clicking on the overlay
     overlay.addEventListener("click", function () {
-      $(navbarMenu).collapse('hide');
+      $('#navbarMenu').collapse('hide');
     });
   });
   
