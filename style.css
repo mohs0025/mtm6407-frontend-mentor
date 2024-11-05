@@ -27,6 +27,17 @@ a {
     text-decoration: none;
 }
 
+
+/* Specific styling for navigation links */
+.nav-link {
+    color: var(--almost-black); /* Default color for nav links */
+}
+
+.nav-link:hover {
+    color: var(--medium-gray); /* Hover color for nav links */
+}
+
+
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
     color: var(--almost-black);
@@ -93,12 +104,15 @@ header {
 /* Register Button */
 .register-btn {
     border-radius: 10px;
+    color: var(--almost-black); /* Default color */
+    border: 1px solid var(--almost-black); /* Border color */
 }
 
-/* Hover Effect for Register */
+
+
+/* Register button hover styling */
 .register-btn:hover {
-    background-color: var(--almost-white);
-    border-color: var(--medium-gray);
+    color: var(--medium-gray); /* Set hover text color to medium-gray */
+    background-color: transparent; /* Ensure background stays transparent */
+    border-color: var(--medium-gray); /* Optional: Change border color on hover */
 }
-
-
