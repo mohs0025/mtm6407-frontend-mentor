@@ -1,0 +1,135 @@
+"/* Custom CSS Variables */
+:root {
+    --almost-white: hsl(0, 0%, 98%);
+    --medium-gray: hsl(0, 0%, 41%);
+    --almost-black: hsl(0, 0%, 8%);
+    --font-body: 'Epilogue', sans-serif;
+  }
+  
+  /* General Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body Styling */
+  body {
+    font-family: var(--font-body);
+    color: var(--medium-gray);
+    background-color: var(--almost-white);
+    font-size: 18px;
+  }
+  
+  /* Links */
+  a {
+    color: var(--almost-black);
+    text-decoration: none;
+  }
+  
+  /* Headings */
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--almost-black);
+  }
+
+  
+  /* navigation bar section */
+  /* Customize Navbar */
+.navbar {
+    padding: 1rem 0;
+  }
+  
+  .navbar-brand img {
+    width: 84px; /* Adjust based on your logo size */
+  }
+  
+  .navbar-toggler {
+    border: none;
+  }
+  
+  .navbar-toggler img {
+    width: 24px;
+    height: 18px;
+  }
+    
+  .nav-link:hover {
+    color: var(--almost-black);
+  }
+  
+  .dropdown-menu {
+    background-color: var(--almost-white);
+    border: none;
+    box-shadow: none;
+  }
+  
+  .dropdown-item {
+    color: var(--medium-gray);
+    font-weight: 500;
+  }
+  
+  .dropdown-item:hover {
+    color: var(--almost-black);
+    background-color: var(--almost-white);
+  }
+  
+  .btn-outline-dark {
+    border-color: var(--almost-black);
+    color: var(--medium-gray);
+  }
+  
+  .btn-outline-dark:hover {
+    background-color: var(--almost-black);
+    color: var(--almost-white);
+    border-color: var(--almost-black);
+  }
+
+  
+  
+  
+  .logo {
+    width: 80px;
+  }
+  
+  /* Mobile Menu */
+  #navbarMenu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 75%;
+    height: 100%;
+    background-color: var(--almost-white);
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .nav-link {
+    color: var(--almost-black);
+    font-weight: 500;
+  }
+  
+  .arrow-icon {
+    width: 10px;
+    margin-left: 5px;
+  }
+  
+  .register-btn {
+    color: var(--almost-black);
+    /* border: 1px solid var(--almost-black); */
+    text-align: center;
+    padding: 0.5rem;
+    margin-top: 10px;
+  }
+  
+
+
+  /* Close Button Styling */
+.close-btn {
+    align-self: flex-end;
+    font-size: 4.5rem;
+    color: var(--almost-black);
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 1rem;
+  }
+
+  
