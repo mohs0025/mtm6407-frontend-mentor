@@ -92,7 +92,8 @@ header {
     height: 100px;
     align-items: center;
     justify-content: space-between;
-}
+    /* margin-left: 30px;
+} */
 
 /* Center the hamburger icon */
 .navbar-toggler {
@@ -108,7 +109,11 @@ header {
     border: 1px solid var(--almost-black); /* Border color */
 }
 
-
+/* Hover Effect for Register */
+.register-btn:hover {
+    background-color: var(--almost-white);
+    border-color: var(--medium-gray);
+}
 
 /* Register button hover styling */
 .register-btn:hover {
@@ -116,3 +121,113 @@ header {
     background-color: transparent; /* Ensure background stays transparent */
     border-color: var(--medium-gray); /* Optional: Change border color on hover */
 }
+
+
+/* Dropdown Content Styling */
+#featuresDropdown,
+#companyDropdown {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    position: absolute; /* Positioning to ensure it overlays correctly */
+    z-index: 1000;
+    min-width: 150px; /* Adjust width as needed */
+}
+
+/* Adjust dropdown items */
+#featuresDropdown a,
+#companyDropdown a {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0;
+    color: var(--medium-gray); /* Match color with the style guide */
+    font-weight: 500;
+}
+
+#featuresDropdown a:hover,
+#companyDropdown a:hover {
+    color: var(--almost-black); /* Darker color on hover */
+}
+
+/* Align icons and text */
+#featuresDropdown a img,
+#companyDropdown a img {
+    margin-right: 8px; /* Space between icon and text */
+}
+
+/* Dropdown Trigger Styling */
+.nav-item .nav-link {
+    position: relative;
+    color: var(--almost-black);
+    font-weight: 700;
+}
+
+.nav-item .nav-link::after {
+    content: '\25BE'; /* Down arrow symbol */
+    margin-left: 4px;
+    font-size: 0.75em;
+}
+
+/* Hover effect for the dropdown trigger */
+.nav-item .nav-link:hover {
+    color: var(--medium-gray);
+}
+
+
+
+
+
+
+/* Remove arrow for specific dropdown links on small screens */
+.nav-item .nav-link[data-target='#featuresDropdownMobile']::after,
+.nav-item .nav-link[data-target='#companyDropdownMobile']::after {
+    content: none;
+}
+
+
+/* Remove arrow for specific dropdown links on large screens */
+.nav-item .features-toggle::after,
+.nav-item .company-toggle::after {
+    content: none;
+}
+
+
+
+
+/* Remove arrow from sub-items in dropdown */
+#featuresDropdown .nav-link::after,
+#companyDropdown .nav-link::after,
+#featuresDropdownMobile .nav-link::after,
+#companyDropdownMobile .nav-link::after {
+    content: none;
+}
+
+
+/* Custom Header Styles */
+.custom-header {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Large screen layout with 200px margins on both sides */
+@media (min-width: 1200px) {
+    .custom-header {
+        /* margin-left: 50px;
+        margin-right: 50px; */
+    }
+}
+
+
+/* Overlay styling */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    z-index: 10;
+    display: none; /* Hidden by default */
+}
+

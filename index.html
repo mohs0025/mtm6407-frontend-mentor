@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- responsive layout -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Frontend Mentor | Intro section with dropdown navigation</title>
 
@@ -13,34 +14,76 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
- <!-- Header with logo and hamburger menu -->
-<header class="d-flex justify-content-between align-items-center p-3">
-  <img src="images/logo.svg" alt="Snap logo" class="logo">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu">
-      <span>&#9776;</span> <!-- Hamburger icon using HTML entity -->
-  </button>
-</header>
+  <header class="d-flex justify-content-between align-items-center p-3 custom-header mx-3 mx-lg-5">
+    <!-- Logo and Navigation Container -->
+    <div class="d-flex align-items-center ">
+      <!-- Logo -->
+      <img src="images/logo.svg" alt="Snap logo" class="logo">
+  
+      <!-- Desktop Navigation (visible on large screens only) -->
+      <nav class="d-none d-lg-flex pl-lg-5"> <!-- Use 'ml-lg-4' to add left margin on large screens -->
+        <!-- Features Dropdown -->
+        <div class="nav-item dropdown px-lg-4">
+          <a href="#" class="nav-link features-toggle">
+            Features <img src="images/icon-arrow-down.svg" class="arrow-icon" id="featuresArrow" alt="Expand arrow">
+          </a>
+          <div class="collapse pl-3" id="featuresDropdown">
+            <a href="#" class="nav-link"><img src="images/icon-todo.svg" alt="Todo Icon"> Todo List</a>
+            <a href="#" class="nav-link"><img src="images/icon-calendar.svg" alt="Calendar Icon"> Calendar</a>
+            <a href="#" class="nav-link"><img src="images/icon-reminders.svg" alt="Reminders Icon"> Reminders</a>
+            <a href="#" class="nav-link"><img src="images/icon-planning.svg" alt="Planning Icon"> Planning</a>
+          </div>
+        </div>
+  
+        <!-- Company Dropdown -->
+        <div class="nav-item dropdown px-lg-4">
+          <a href="#" class="nav-link company-toggle">
+            Company <img src="images/icon-arrow-down.svg" class="arrow-icon" id="companyArrow" alt="Expand arrow">
+          </a>
+          <div class="collapse pl-3" id="companyDropdown">
+            <a href="#" class="nav-link">History</a>
+            <a href="#" class="nav-link">Our Team</a>
+            <a href="#" class="nav-link">Blog</a>
+          </div>
+        </div>
+  
+        <!-- Additional Links -->
+        <a href="#" class="nav-link px-lg-5">Careers</a>
+        <a href="#" class="nav-link px-lg-5">About</a>
+      </nav>
+    </div>
+  
+    <!-- Login and Register buttons for large screens -->
+    <div class="d-none d-lg-flex align-items-center">
+      <a href="#" class="nav-link">Login</a>
+      <a href="#" class="btn btn-outline-dark register-btn ml-3">Register</a>
+    </div>
+  
+    <!-- Mobile Menu Trigger (hamburger icon, visible on small screens) -->
+    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span>&#9776;</span>
+    </button>
+  </header>
+  
+  
 
-
-  <!-- Overlay (hidden initially) -->
-  <div id="overlay"></div>
-
-  <!-- Collapsible Mobile Menu -->
-  <nav id="navbarMenu" class="collapse">
-    <div class="d-flex flex-column align-items-start p-3">
-      <!-- Close button inside the navbar -->
+  <!-- Mobile Menu (collapsible, only visible on small screens) -->
+  <div class="collapse d-lg-none" id="navbarMenu">
+    <nav class="d-flex flex-column align-items-start p-3">
+      <!-- Close button for mobile menu -->
       <button type="button" class="close-btn" aria-label="Close" data-toggle="collapse" data-target="#navbarMenu">
         <span aria-hidden="true">&times;</span>
       </button>
 
-      <!-- Features Dropdown -->
+      <!-- Features Dropdown for Mobile -->
       <div class="nav-item">
-        <a href="#" class="nav-link" data-toggle="collapse" data-target="#featuresDropdown" aria-expanded="false">
-          Features <img src="images/icon-arrow-down.svg" class="arrow-icon" id="featuresArrow" alt="Expand arrow">
+        <a href="#" class="nav-link" data-toggle="collapse" data-target="#featuresDropdownMobile" aria-expanded="false">
+          Features <img src="images/icon-arrow-down.svg" class="arrow-icon" id="featuresArrowMobile" alt="Expand arrow">
         </a>
-        <div class="collapse pl-3" id="featuresDropdown">
+        <div class="collapse pl-3" id="featuresDropdownMobile">
           <a href="#" class="nav-link"><img src="images/icon-todo.svg" alt="Todo Icon"> Todo List</a>
           <a href="#" class="nav-link"><img src="images/icon-calendar.svg" alt="Calendar Icon"> Calendar</a>
           <a href="#" class="nav-link"><img src="images/icon-reminders.svg" alt="Reminders Icon"> Reminders</a>
@@ -48,12 +91,12 @@
         </div>
       </div>
 
-      <!-- Company Dropdown -->
+      <!-- Company Dropdown for Mobile -->
       <div class="nav-item">
-        <a href="#" class="nav-link" data-toggle="collapse" data-target="#companyDropdown" aria-expanded="false">
-          Company <img src="images/icon-arrow-down.svg" class="arrow-icon" id="companyArrow" alt="Expand arrow">
+        <a href="#" class="nav-link" data-toggle="collapse" data-target="#companyDropdownMobile" aria-expanded="false">
+          Company <img src="images/icon-arrow-down.svg" class="arrow-icon" id="companyArrowMobile" alt="Expand arrow">
         </a>
-        <div class="collapse pl-3" id="companyDropdown">
+        <div class="collapse pl-3" id="companyDropdownMobile">
           <a href="#" class="nav-link">History</a>
           <a href="#" class="nav-link">Our Team</a>
           <a href="#" class="nav-link">Blog</a>
@@ -64,18 +107,22 @@
       <a href="#" class="nav-link">Careers</a>
       <a href="#" class="nav-link">About</a>
 
-      <!-- Login and Register -->
-      <div class="d-flex flex-column align-items-center mt-3 w-100">
-        <a href="#" class="nav-link text-center w-100">Login</a>
-        <a href="#" class="btn btn-outline-dark w-100 register-btn mt-2">Register</a>
-      </div>
-    </div>
-  </nav>
+      <!-- Login and Register for Mobile -->
+      <a href="#" class="nav-link text-center w-100">Login</a>
+      <a href="#" class="btn btn-outline-dark w-100 register-btn mt-2">Register</a>
 
-  <!-- Bootstrap JS and jQuery (necessary for Bootstrap’s JavaScript components) -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    </nav>
+  </div>
+
+  <!-- Overlay for Mobile Menu (hidden initially) -->
+  <div id="overlay"></div>
+
+  <!-- jQuery, Popper.js, and Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <!-- Custom JavaScript -->
   <script src="script.js"></script>
 </body>
+
 </html>
