@@ -24,7 +24,7 @@
       <img src="images/logo.svg" alt="Snap logo" class="logo">
   
       <!-- Desktop Navigation (visible on large screens only) -->
-      <nav class="d-none d-lg-flex pl-lg-5"> <!-- Use 'ml-lg-4' to add left margin on large screens -->
+      <nav class="d-none d-lg-flex pl-lg-5"> <!-- 'ml-lg-4' to add left margin on large screens -->
         <!-- Features Dropdown -->
         <div class="nav-item dropdown px-lg-4">
           <a href="#" class="nav-link features-toggle">
@@ -118,25 +118,41 @@
   <div id="overlay"></div>
 
 
-  <!-- Hero Section -->
-  <section class="container-fluid hero-section d-flex align-items-center justify-content-center">
-    <div class="row w-100 mx-lg-5 px-lg-5 align-items-center">
-      <div class="col-lg-6 text-center text-lg-left order-2 order-lg-1">
-        <h1>Make remote work</h1>
-        <p>Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
-        <a href="#" class="btn btn-dark btn-learn-more mt-3">Learn more</a>
-        <div class="client-logos mt-4">
-          <img src="images/client-databiz.svg" alt="Databiz logo">
-          <img src="images/client-audiophile.svg" alt="Audiophile logo">
-          <img src="images/client-meet.svg" alt="Meet logo">
-          <img src="images/client-maker.svg" alt="Maker logo">
-        </div>
+<!-- hero section codes -->
+<main class="hero-section d-flex flex-column align-items-center text-center text-lg-left mt-2 mt-lg-5 mb-5">
+  <!-- Hero Image for Mobile (displayed only on smaller screens) -->
+  <img src="images/image-hero-mobile.png" alt="Remote work illustration" class="d-lg-none img-fluid w-100 mb-4">
+  
+  <!-- Main Content Row -->
+  <div class="row align-items-stretch d-flex w-100">
+      <!-- Text Content (on the left for desktop, centered for mobile) -->
+      <div class="col-12 col-lg-6 my-lg-auto px-4">
+        <h1 class="font-weight-bold mt-5 mt-lg-0">Make remote work</h1>
+          <p class="mt-4">
+              Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.
+          </p>
+          <button class="btn btn-custom-primary mt-4 p-4 mb-4">Learn more</button>
+          
+          <!-- Client Logos Row -->
+          <div class="d-flex justify-content-center justify-content-lg-start mt-4">
+              <img src="images/client-databiz.svg" alt="Databiz logo" class="img-fluid mx-3">
+              <img src="images/client-audiophile.svg" alt="Audiophile logo" class="img-fluid mx-3">
+              <img src="images/client-meet.svg" alt="Meet logo" class="img-fluid mx-3">
+              <img src="images/client-maker.svg" alt="Maker logo" class="img-fluid mx-3">
+          </div>
       </div>
-      <div class="col-lg-6 d-flex justify-content-center order-1 order-lg-2">
-        <img src="images/image-hero-desktop.png" alt="Hero Image" class="img-fluid hero-image">
+
+      <!-- Hero Image for Desktop (displayed only on larger screens) -->
+      <div class="col-lg-6 d-none d-lg-flex ">
+          <img src="images/image-hero-desktop.png" alt="Remote work illustration" class="img-fluid d-lg-flex">
       </div>
-    </div>
-  </section>
+  </div>
+</main>
+
+
+
+
+  
 
 
 
