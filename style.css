@@ -328,18 +328,55 @@ header {
     /* Image Column Alignment */
     .hero-section .col-lg-6.d-lg-flex {
         justify-content: flex-end;
-        /* Aligns the image to the right */
-    }
-    
-
+        padding-right: 5%; /* Adjust as needed */
+    }  
 }
 
 
 .hero-section .col-lg-6 img.d-lg-flex {
+    width: 100%;
     height: auto;
-    /* Allow the image to adjust height based on content */
-    max-height: 70vh;
-    /* Limit the height to prevent excessive cropping */
     object-fit: contain;
-    /* Ensures the entire image is visible without cropping */
+    max-height: 75vh; /* Adjust as needed */
+}
+
+
+/* Adjust Flex and Column Width for Large Screens: */
+@media (min-width: 992px) {
+    .hero-section .col-lg-6:first-child {
+        max-width: 45%; /* Adjust as needed */
+    }
+    .hero-section .col-lg-6:last-child {
+        max-width: 55%; /* Adjust as needed */
+    }
+}
+
+/* Logo Container Styling */
+.logo-container {
+    display: flex;
+    justify-content: space-between; /* Distribute space evenly between logos */
+    width: 100%; /* Make container span full width of the parent */
+    max-width: 600px; /* Optional: set max width to match <h1> and <p> width */
+    margin: 0 auto; /* Center the container */
+    padding: 0 1rem; /* Add some padding if needed for alignment */
+}
+
+/* Logo Item Styling */
+.logo-item {
+    flex: 1; /* Allow logos to take equal space */
+    max-width: 100px; /* Limit width if needed, adjust as desired */
+    text-align: center; /* Center-align logos */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .logo-item {
+        max-width: 70px; /* Adjust logo size on smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .logo-item {
+        max-width: 60px; /* Further reduce logo size on very small screens */
+    }
 }
