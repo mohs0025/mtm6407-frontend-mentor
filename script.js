@@ -70,3 +70,5 @@ document.addEventListener("DOMContentLoaded", function() {
         $('#navbarMenu').collapse('hide');
     });
 });
+
+

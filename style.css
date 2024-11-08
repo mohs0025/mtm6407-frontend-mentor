@@ -81,7 +81,7 @@ h6 {
 } */
 
 .hero-section h1 {
-    font-size: clamp(2rem, 5vw + 1rem, 6.5rem);
+    font-size: clamp(2rem, 5vw + 1rem, 6rem);
 }
 
 
@@ -328,7 +328,6 @@ header {
     /* Image Column Alignment */
     .hero-section .col-lg-6.d-lg-flex {
         justify-content: flex-end;
-        padding-right: 5%; /* Adjust as needed */
     }  
 }
 
@@ -358,7 +357,6 @@ header {
     width: 100%; /* Make container span full width of the parent */
     max-width: 600px; /* Optional: set max width to match <h1> and <p> width */
     margin: 0 auto; /* Center the container */
-    padding: 0 1rem; /* Add some padding if needed for alignment */
 }
 
 /* Logo Item Styling */
